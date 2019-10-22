@@ -1,0 +1,314 @@
+
+body{
+    margin:0
+}
+
+.pic_style{
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    
+}
+
+.nav_bar{
+    width: 100%;
+    height: 15vh;
+    background-color:rgb(112, 133, 197);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.nav_bar .logo{
+    /* width: 100px;
+    height: 100px;
+    /* background-image: url("/images/logo.jpg");
+    background-size: cover;
+    background-position: center; */ 
+    margin-left: 10px;
+   
+}   
+
+.nav_bar .menu{
+    margin-top: 30px;
+}
+
+.nav_bar .menu ul{
+    display: flex;
+    list-style:none
+}
+
+.nav_bar .menu ul li{
+    margin:0 5px;
+    font-size: 50px;
+    border: black solid 1px;
+    padding: 15px;
+    background-color:aqua;
+}
+
+.nav_bar .menu ul li:hover{
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#back_button{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: aqua;
+    border-radius:999em;
+    line-height:100px;
+    text-align:center;
+}
+
+#back_button:hover{ 
+    background:white;
+}
+
+#section1{
+    width: 100%;
+    height:100vh;
+    background-color: darkgray;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    height: 100%;
+    background-color:white;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section1 .pic{
+    width:49%;
+    height: 85%;
+    background-image: url(/images/bg-2.jpg);
+    
+}
+
+#section1 .text{
+    width:49%;
+    height: 85%;
+    text-align:justify;
+    line-height:30px;
+    font-size: 30px;
+    background-color:rgba(0, 0, 139, 0.39) ;
+    color: white;
+    padding:50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#section2{
+    width: 100%;
+    height:100vh;
+    background-color :darkgray;
+}
+
+#section2 .bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/bg-3.jpg);
+    opacity: 0.5;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    
+    
+}
+
+#section2 span{
+    background-color: black;
+    padding: 10px;
+    z-index: 99;
+    font-size: 50px;
+    color: white;
+}
+
+#section3{
+    width: 100%;
+    height:100vh;
+    background-color:darkgray;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+#section3 .box{
+    height: 80%;
+    width: 33%;
+    background-color:gray;
+    border: 1px black solid;
+}
+
+#section3 .box .pic1{
+    height: 50%;
+    width: 100%;
+    background-image: url(/images/bg-4.jpg);
+}
+
+
+#section3 .box .text{
+    height: 50%;
+    width: 100%;
+    text-align:justify;
+    line-height:30px;
+    font-size: 20px;
+    background-color:rgba(0, 0, 139, 0.39) ;
+    color: white;
+    padding:50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#section3 .box .pic2{
+    height: 50%;
+    width: 100%;
+    background-image: url(/images/bg-5.jpg);
+}
+
+#section3 .box .pic3{
+    height: 50%;
+    width: 100%;
+    background-image: url(/images/bg-6.jpg);
+}
+
+footer{
+    width: 100%;
+    height: 20vh;
+   
+} 
+
+footer .container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(191, 188, 236);
+    justify-content: center;
+    
+}
+
+#footer_box{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+
+
+
+
+@media screen and (max-width:991px) {
+
+    .nav_bar .logo{
+       display: none;
+    }   
+    
+    .nav_bar .menu_button{
+        width: 80px;
+        height: 80px;
+        background-image:url(/images/選單.png);
+        margin-left: 10px;
+        background-size: cover;
+        background-position: center;
+        
+    } 
+
+    .nav_bar .menu{
+        display: none;
+        
+    }
+    
+    .nav_bar .menu_button:hover .menu{
+        display:flex;
+    }
+
+    .nav_bar .menu ul{
+        display: flex;
+        flex-direction: column;
+        list-style:none;
+        z-index: 99;
+       
+    }
+    
+    .nav_bar .menu ul li{
+        margin:0 5px;
+        font-size: 30px;
+        border: black solid 1px;
+        padding: 10px;
+        
+        
+    }
+    
+
+    #section1{
+        width: 100vw;
+        height:100vh;
+        display:block
+        
+    }
+    
+
+    .container{
+        width: 80%;
+        height: 100%;
+        background-color:white;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+
+        
+    }
+    
+    #section1 .pic{
+        width:100%;
+        height: 50%;
+        background-image: url(/images/bg-2.jpg);
+        order: 2;
+    }
+    
+    #section1 .text{
+        width:100%;
+        height: 50%;
+        text-align:justify;
+        line-height:22px;
+        font-size: 20px;
+        background-color:rgba(0, 0, 139, 0.39) ;
+        
+    }
+
+    #section2 span{
+        display:none;
+    }
+
+    #section3 .box{
+        height: 70%;
+        width: 100%;
+        background-color:gray;
+    }
+    
+ 
+    
+}
