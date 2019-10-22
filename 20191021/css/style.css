@@ -99,7 +99,7 @@ a {
 #section1 .pic{
     width:49%;
     height: 85%;
-    background-image: url(/images/bg-2.jpg);
+    background-image: url(../images/bg-2.jpg);
     
 }
 
@@ -127,7 +127,7 @@ a {
 #section2 .bg{
     width: 100%;
     height: 100%;
-    background-image: url(/images/bg-3.jpg);
+    background-image: url(../images/bg-3.jpg);
     opacity: 0.5;
     display:flex;
     align-items: center;
@@ -166,7 +166,7 @@ a {
 #section3 .box .pic1{
     height: 50%;
     width: 100%;
-    background-image: url(/images/bg-4.jpg);
+    background-image: url(../images/bg-4.jpg);
 }
 
 
@@ -187,13 +187,13 @@ a {
 #section3 .box .pic2{
     height: 50%;
     width: 100%;
-    background-image: url(/images/bg-5.jpg);
+    background-image: url(../images/bg-5.jpg);
 }
 
 #section3 .box .pic3{
     height: 50%;
     width: 100%;
-    background-image: url(/images/bg-6.jpg);
+    background-image: url(../images/bg-6.jpg);
 }
 
 footer{
@@ -228,7 +228,7 @@ footer .container{
     .nav_bar .menu_button{
         width: 80px;
         height: 80px;
-        background-image:url(/images/選單.png);
+        background-image:url(../images/選單.png);
         margin-left: 10px;
         background-size: cover;
         background-position: center;
@@ -285,7 +285,7 @@ footer .container{
     #section1 .pic{
         width:100%;
         height: 50%;
-        background-image: url(/images/bg-2.jpg);
+        background-image: url(../images/bg-7.jpg);
         order: 2;
     }
     
