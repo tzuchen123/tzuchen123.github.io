@@ -107,6 +107,13 @@ a {
     
 }
 
+#section1 .pic:hover{
+    width:49%;
+    height: 85%;
+    background-image: url(../images/bg-5.jpg);
+    
+}
+
 #section1 .text{
     width:49%;
     height: 85%;
