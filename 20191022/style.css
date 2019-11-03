@@ -1,125 +1,112 @@
 body{
-    margin:0
+    margin: 0;
+    overflow-y: hidden;
 }
 
-@media (max-width:1680px){
-    .container{
-        width: 1336px;
-        margin: 0 auto;
-    }
-}
-@media (max-width:1460px){
-    .container{
-        width: 1136px;
-        margin: 0 auto;
-    }
-}
-@media (max-width:1280px){
-    .container{
-        width: 960px;
-        margin: 0 auto;
-    }
-}
-@media (max-width:1024px){
-    .container{
-        width: 100%;
-        margin: 0 auto;
-    }
-
+.container{   
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
-@media (max-width:767px){
-    .container{
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-    }
-    
-    nav .container .menu{
-        display: none;
-
-    }
-
-    .mobile_nav_buttom{
-        height: 100px;
-        width: 100px;
-        background: orange;
-    }
-
-    .moble_menu{
-        width: 100%;
-        position:absolute;
-        top: 200px;
-        background: black;
-        color: white;
-    }
-
-    .moble_menu.active{
-        display: none;
-    }
+image{
+    background-size: cover;
+    background-position: center;
 }
-
 
 nav{
-    width: 100%;
-    background-color: black;
-   
+    width: 100vw;
+    height: 60px;
+    background: black;
     
 }
 
 nav .container{
-    max-width: 1600px;
-    margin: 0 auto;
+    width: 80%;
     display: flex;
+    background:black;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-a{
-    text-decoration: none;
-    display: block;
-    padding: 5px 10px;
-    color: white;
+nav .container #logo{
+    background-image: url(/20191022/images/logo.png);
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    background-position: center;
 }
-nav .container #FD{
+
+nav .container #fluent_design_system{
     color: white;
+    font-weight: bold;
 }
 
 nav .container .menu ul{
     display: flex;
-    list-style:none;
-
+    list-style-type:none;
 }
 
 nav .container .menu ul li{
+    padding: 5px 40px;
     color: white;
 }
 
+a{
+text-decoration:none;
+}
+
+a:visited {color:white;}
 
 #section1{
-    width: 100%;
-    height: 100vh;
-    background-color: cadetblue;
-    margin: 0px auto;
+    height: 85vh;
+    width: 100vw;
+    background:black;
+
 }
 
 #section1 .container{
+    height: 100%;
     width: 80%;
-    height: 100%;
-    margin: 0 auto;
+    background:black;
     display: flex;
+    align-items: center;
+
 }
 
-#section1 .container .text{
-    width: 40%;
-    height: 100%;
+#section1 .container .card{
     color: white;
-    background-color: black;
+    width: 50%;
+    height: 80%;
 }
 
-#section1 .container .pic{
-    width: 60%;
-    height: 100%;
-    background-color:orange;
-} 
+#section1 .container .card h1{
+    width: 80%;
+    padding:50px;
+    font-size: 64px;
+    line-height: 80px;
+    color: rgb(79, 229, 255);
+    font-weight: 600;
+    margin: 0 auto;
+}
 
+#section1 .container .card p{
+    width: 80%;
+    padding:30px;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+#section1 .container .section1_image{
+    background-image: url("https://i.pinimg.com/736x/6e/34/fc/6e34fc1a7f220abb0b5d4d23c2a54c2a--crazy-cats-cat-lovers.jpg");
+    width: 50%;
+    height: 100%;
+
+}
+
+#section2{
+    height: 25vh;
+    width: 100vw;
+}

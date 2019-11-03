@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fluent Design</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,67 +13,87 @@
 <body>
     <nav>
         <div class="container">
-            <div id="logo">
-                <a href="https://www.microsoft.com/zh-tw/">
-                    <img src="./images/logo.png" alt="logo" height=90px width=100px>
+            <div id="logo"></div>
+            <div id="fluent_design_system">
+                <a href="https://www.microsoft.com/design/fluent/#/">
+                    Fluent Design System
                 </a>
             </div>
-            <div id="FD"><a href="">Fluent Design System</a></div>
             <div class="menu">
-                <ul>
-                    <li>
-                        <a href="">Web</a>
-                    </li>
-                    <li>
-                        <a href="">Windows</a>
-                    </li>
-                    <li>
-                        <a href="">iOS</a>
-                    </li>
-                    <li>
-                        <a href="">Android</a>
-                    </li>
-                </ul>
+                <UL>
+                    <a href="">
+                        <li>Web</li>
+                    </a>
+                    <a href="">
+                        <li>Windows</li>
+                    </a>
+                    <a href="">
+                        <li>IOS</li>
+                    </a>
+                    <a href="">
+                        <li>Android</li>
+                    </a>
+                </UL>
             </div>
-            <div class="mobile_nav_buttom"></div>
-            <div class="moble_menu active">
-                    <ul>
-                        <li>
-                            <a href="">Web</a>
-                        </li>
-                        <li>
-                            <a href="">Windows</a>
-                        </li>
-                        <li>
-                            <a href="">iOS</a>
-                        </li>
-                        <li>
-                            <a href="">Android</a>
-                        </li>
-                    </ul>
-                </div>
         </div>
     </nav>
-    <main>
-            <section id="section1">
-                <div class="container">
-                    <div class="text">
-                        <div class="header">
-                            <h1>Fluent Design System</h1>
-                        </div>
-                        <div class="paragraph">
-                            <p>Fluent brings the fundamentals of principled design, innovation in technology, and
-                                customer
-                                needs together as one. It’s a collective approach to creating simplicity and coherence
-                                through a shared, open design system across platforms.</p>
-                            Open ecosystem, open design system.</p>
-                        </div>
-                    </div>
-                    <div class="pic"></div>
+    <section id="section1">
+        <div class="container">
+            <div id="section1_card" class="card">
+                <h1>Fluent Design System</h1>
+                <p>Fluent brings the fundamentals of principled design, innovation in technology, and customer needs
+                    together as one. It’s a collective approach to creating simplicity and coherence through a shared,
+                    open design system across platforms.</p>
+
+                <p> Open ecosystem, open design system.</p>
+            </div>
+            <div class="section1_image"></div>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="container">
+            <div id="section2_card1" >
+                <div id="section2_card1_image" class="image"></div>
+                <div class="article">
+                    <h2>Web</h2>
+                    <p>Create your own web apps and add-ins.</p>
                 </div>
-            </section>
-    </main>
-    <footer></footer>
+                <div class="get_start">Get Start</div>
+            </div>
+            <div id="section2_card2" >
+                    <div id="section2_card2_image" class="image"></div>
+                    <div class="article">
+                        <h2>Windows</h2>
+                        <p>Create and publish your own Windows apps.</p>
+                    </div>
+                    <div class="get_start"></div>
+                </div>
+                <div id="section2_card3" >
+                        <div id="section2_card3_image" class="image"></div>
+                        <div class="article">
+                            <h2>IOS</h2>
+                            <p>Take your custom apps to the mobile market.</p>
+                        </div>
+                        <div class="get_start"></div>
+                    </div>
+                    <div id="section2_card4" >
+                            <div id="section2_card4_image" class="image"></div>
+                            <div class="article">
+                                <h2>android</h2>
+                                <p>Take your custom apps to the mobile market.</p>
+                            </div>
+                            <div class="get_start"></div>
+                        </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="container"></div>
+    </section>
+    <footer>
+        <div class="container"></div>
+    </footer>
+
+
 </body>
 
 </html>
