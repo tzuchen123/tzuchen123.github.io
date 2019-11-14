@@ -139,7 +139,7 @@ span{
     }
     
 #section2 .img{
-    background-image: url("/images/msft-verge-fluent.jpg");
+    background-image: url("C:\Users\莊子臻\Documents\GitHub\tzuchen123.github.io\FLUENT DESIGN\images\msft-verge-fluent");
     width: 100vw;
     height: 100vh;
   
@@ -231,6 +231,7 @@ span{
     position: relative;
     background-color: rgb(25, 25, 25);
     height: auto;
+    margin: 0;
 }
 
 #section5 .container .article_box {
