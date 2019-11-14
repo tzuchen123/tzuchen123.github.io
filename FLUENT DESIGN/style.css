@@ -139,7 +139,7 @@ span{
     }
     
 #section2 .img{
-    background-image: url("C:\Users\莊子臻\Documents\GitHub\tzuchen123.github.io\FLUENT DESIGN\images\msft-verge-fluent");
+    background-image: url("msft-verge-fluent");
     width: 100vw;
     height: 100vh;
   
@@ -186,7 +186,7 @@ span{
 }
 
 #section3 .container .img{
-    /* background-image: url("./images/sphere@1x.png"); */
+    background-image: url("images/sphere@1x.png");
     width: 600px;
     height: 600px;
     
