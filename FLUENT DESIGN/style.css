@@ -186,7 +186,7 @@ span{
 }
 
 #section3 .container .img{
-    background-image: url("/images/sphere@1x.png");
+    /* background-image: url("./images/sphere@1x.png"); */
     width: 600px;
     height: 600px;
     
