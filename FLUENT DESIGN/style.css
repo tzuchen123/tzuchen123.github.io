@@ -138,11 +138,18 @@ span{
     /* background-color: black; */
     }
     
-#section2 .img{
-    background-image: url("msft-verge-fluent");
+/* #section2 .img{
+    background-image: url("images/123.jpg");
     width: 100vw;
     height: 100vh;
-  
+} */
+
+
+#section2 .container .img{
+    background-image: url("images/sphere@1x.png");
+    width: 600px;
+    height: 600px;
+    
 }
 
 #section2 .img .header{
