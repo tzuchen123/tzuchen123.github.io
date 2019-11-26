@@ -22,7 +22,7 @@ body header nav .container {
 }
 
 body header nav .container .logo {
-  background-image: url("/images/logo.png");
+  background-image: url("./images/logo.png");
   height: 180px;
   width: 346px;
 }
