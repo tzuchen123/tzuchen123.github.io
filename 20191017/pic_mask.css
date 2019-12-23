@@ -1,9 +1,0 @@
-.pic_mask{
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-}
-
-.pic_mask:hover{
-    opacity: 1;
-}
