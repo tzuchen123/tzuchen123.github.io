@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+}
+
+body nav {
+  background-color: grey;
+}
+
+body nav .container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+body nav .container .logo {
+  background-image: url("https://www.designfreelogoonline.com/wp-content/uploads/2015/05/00496-cat-logo-design-free-logomaker-01.png");
+  height: 60px;
+  width: 90px;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-left: 15px;
+}
+
+body nav .container ul {
+  list-style-type: none;
+  height: 50px;
+  float: right;
+}
+
+body nav .container ul li {
+  float: left;
+  font-size: 30px;
+  color: red;
+}
+
+body nav .container ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+body nav .container .clearfix {
+  clear: both;
+}
+
+body #section_1 .top_bg {
+  height: 100vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/%E7%8C%AB_-_panoramio_-_kisaragi.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.65;
+}
+
+body #section_1 .top_bg .top_index {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
+  letter-spacing: 5px;
+}
+
+body #section_1 .down {
+  background-color: grey;
+  padding: 50px 100px;
+  margin: 0 auto;
+}
+
+body #section_1 .down .header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+}
+
+body #section_1 .down .article_1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+body #section_2 .bg_2 {
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/bg-2.jpg");
+  z-index: 10;
+}
+
+body #section_2 .bg_2 .mask {
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.452);
+  z-index: 15;
+}
+
+body #section_2 .bg_2 .mask .index_rest {
+  color: white;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
+  letter-spacing: 5px;
+  z-index: 20;
+}
+
+body #section_2 .article_rest {
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 50px 100px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+body #section_3 .bg_3 {
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/bg-3.jpg");
+  z-index: 10;
+}
+
+body #section_3 .bg_3 .mask {
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.452);
+  z-index: 15;
+}
+
+body #section_3 .bg_3 .mask .index_rest {
+  color: white;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
+  letter-spacing: 5px;
+  z-index: 20;
+}
+
+body #section_3 .article_rest {
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 50px 100px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+body footer .bg_3 {
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/bg-4.jpg");
+}
+
+body footer .bg_3 .mask {
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.452);
+  z-index: 15;
+}
+
+body footer .bg_3 .mask .index_rest {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  position: relative;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
+  letter-spacing: 5px;
+  z-index: 20;
+}
+/*# sourceMappingURL=parallex.css.map */

@@ -1,0 +1,323 @@
+@import "./guide.scss";
+
+
+body {
+    margin:0;
+    nav{
+        background-color:$bg-color-grey;
+        .container{
+            max-width: 75%;
+            margin: 0 auto;
+            .logo{
+                background-image: url("https://www.designfreelogoonline.com/wp-content/uploads/2015/05/00496-cat-logo-design-free-logomaker-01.png");
+                height: 60px;
+                width: 90px;
+                float: left;
+                @include pic;
+                position: relative;
+                margin-left: 15px;
+
+            }
+            ul{
+                list-style-type: none;
+                height: 50px;
+                float: right;
+                li{
+                    float: left;
+                    font-size: 30px;
+                    color: red;
+                    a{
+                        text-decoration: none;
+                        display: block;
+                        padding: 15px;
+                    }
+
+                }
+            }
+            .clearfix{
+                clear: both;
+            }
+        }
+    }
+
+
+    #section_1{
+        .top_bg{
+            height: 100vh;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/%E7%8C%AB_-_panoramio_-_kisaragi.jpg");
+            background-attachment: fixed;
+            @include pic;
+            opacity: 0.65;
+
+            .top_index{
+                background-color:$bg-color-black;
+                color:$font-color-title;
+                padding: 10px;
+                font-size: $font-sizq-title;
+                font-weight: 800;
+                position: relative;
+                top: calc(50% - 100px);
+                left: calc(50% - 150px);
+                letter-spacing: 5px;   
+            }
+        }
+    
+        .down{
+            background-color:$bg-color-grey;
+            padding: 50px 100px;
+            margin: 0 auto;
+            .header{
+                text-align: center;
+                font-size: $font-sizq-title;
+                font-weight: $font-weight;
+                color:$font-color-title;
+            }
+            .article_1{
+                font-size: 30px;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    #section_2{
+        .bg_2{
+            @include bg_style;
+            background-image: url('../images/bg-2.jpg');
+            z-index: 10;
+            .mask{
+                height: 70vh;
+                background-color: rgba(255, 255, 255, 0.452);
+                z-index: 15;
+                .index_rest{
+                    color: white;
+                    padding: 10px;
+                    font-size: 50px;
+                    font-weight: 800;
+                    position: relative;
+                    top: calc(50% - 100px);
+                    left: calc(50% - 150px);
+                    letter-spacing: 5px;
+                    z-index: 20;
+                }
+            }
+        }
+        .article_rest{
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 100px;
+            font-family: 'Liu Jian Mao Cao', cursive;
+        }
+    }
+
+    #section_3{
+        .bg_3{
+            @include bg_style;
+            background-image: url('../images/bg-3.jpg');
+            z-index: 10;
+            .mask{
+                height: 70vh;
+                background-color: rgba(255, 255, 255, 0.452);
+                z-index: 15;
+                .index_rest{
+                    color: white;
+                    padding: 10px;
+                    font-size: 50px;
+                    font-weight: 800;
+                    position: relative;
+                    top: calc(50% - 100px);
+                    left: calc(50% - 150px);
+                    letter-spacing: 5px;
+                    z-index: 20;
+                }
+            }
+        }
+        .article_rest{
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 100px;
+            font-family: 'Liu Jian Mao Cao', cursive;
+        }
+    }
+
+ 
+    footer{
+        .bg_3{
+            @include bg_style;
+            background-image: url("../images/bg-4.jpg");
+            .mask{
+                height: 70vh;
+                background-color: rgba(255, 255, 255, 0.452);
+                z-index: 15;
+                .index_rest{
+                    color: white;
+                    background-color: black;
+                    padding: 10px;
+                    font-size: 50px;
+                    font-weight: 800;
+                    position: relative;
+                    top: calc(50% - 100px);
+                    left: calc(50% - 150px);
+                    letter-spacing: 5px;
+                    z-index: 20;
+                }
+            }
+        }
+    }
+}
+
+// * {
+//     margin: 0;
+// }
+
+// nav {
+//     background-color: gray;
+
+// }
+
+// nav .logo {
+//     background-image: url("https://www.designfreelogoonline.com/wp-content/uploads/2015/05/00496-cat-logo-design-free-logomaker-01.png");
+//     height: 60px;
+//     width: 90px;
+//     float: left;
+//     background-position: center;
+//     background-size: cover;
+//     position: relative;
+//     margin-left: 15px;
+
+// }
+
+// nav .container {
+//     max-width: 75%;
+//     margin: 0 auto;
+
+// }
+
+// nav ul {
+//     list-style-type: none;
+//     height: 50px;
+//     float: right;
+
+
+
+// }
+
+// nav ul li {
+//     float: left;
+//     font-size: 30px;
+//     color: red;
+
+// }
+
+// a {
+//     text-decoration: none;
+//     display: block;
+//     padding: 15px;
+// }
+
+// .clearfix {
+//     clear: both;
+
+// }
+
+// #section_1 .top_bg {
+//     height: 100vh;
+//     background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/%E7%8C%AB_-_panoramio_-_kisaragi.jpg");
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-size: cover;
+//     opacity: 0.65;
+
+// }
+
+// #section_1 .top_index {
+//     background-color: black;
+//     color: white;
+//     padding: 10px;
+//     font-size: 50px;
+//     font-weight: 800;
+//     position: relative;
+//     top: calc(50% - 100px);
+//     left: calc(50% - 150px);
+//     letter-spacing: 5px;
+
+// }
+
+// #section_1 .down {
+//     background-color: grey;
+//     padding: 50px 100px;
+//     margin: 0 auto;
+// }
+
+
+
+// #section_1 .header {
+//     text-align: center;
+//     font-size: 50px;
+//     font-weight: 800;
+//     color: white;
+
+// }
+
+// #section_1 .article_1 {
+//     font-size: 30px;
+//     color: white;
+//     text-align: center;
+
+// }
+
+// .bg_style {
+//     height: 70vh;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-size: cover;
+
+
+// }
+
+// .mask {
+//     height: 70vh;
+//     background-color: rgba(255, 255, 255, 0.452);
+//     z-index: 15;
+// }
+
+// .bg_2 {
+//     background-image: url('./images/bg-2.jpg');
+//     z-index: 10;
+
+// }
+
+
+// .index_rest {
+
+//     color: white;
+//     padding: 10px;
+//     font-size: 50px;
+//     font-weight: 800;
+//     position: relative;
+//     top: calc(50% - 100px);
+//     left: calc(50% - 150px);
+//     letter-spacing: 5px;
+//     z-index: 20;
+
+
+// }
+
+// .article_rest {
+//     font-size: 30px;
+//     background-color: black;
+//     color: white;
+//     text-align: center;
+//     padding: 50px 100px;
+//     font-family: 'Liu Jian Mao Cao', cursive;
+
+// }
+
+// .bg_3 {
+//     background-image: url("./images/bg-3.jpg");
+
+// }
