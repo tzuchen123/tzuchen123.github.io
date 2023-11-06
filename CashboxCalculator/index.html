@@ -5,88 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>錢櫃價錢分帳計算機</title>
+    <style>
+        .horizontal {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+        }
+
+        .horizontal li {
+            margin-right: 1em;
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
         <h1>錢櫃價錢分帳計算機</h1>
     </header>
+
+    <nav>
+        選擇計價方式:
+        <ul class="horizontal">
+            <li><a href="person.html">優惠時段(歡樂唱 唱滿點)</a></li>
+            <li><a href="box.html">包廂計費</a></li>
+            <li><a href="group.html">團唱享樂價(不限人數 歡唱到底)</a></li>
+        </ul>
+    </nav>
     <main>
-
-        <div>
-            <label for="person-count">人數:</label>
-            <input type="number" id="person-count" name="person-count" min="1" value="1">
-        </div>
-
-        <br>
-
-        <div class="">
-            <label for="chargeDropdown">選擇計價方式:</label>
-            <select id="chargeDropdown">
-                <option>請選擇計價方式</option>
-                <option value="person">優惠時段(歡樂唱 唱滿點)</option>
-                <option value="box">包廂計費</option>
-                <option value="group">團唱享樂價(不限人數 歡唱到底)</option>
-            </select>
-        </div>
-
-        <br>
-
-        <div class="">
-            <label for="storeDropdown">選擇分店:</label>
-            <select id="storeDropdown"></select>
-        </div>
-
-        <div id="box-size" style="display:none;">
-            <br>
-            <label for="box-size-dropdown">選擇包廂尺寸:</label>
-            <select id="box-size-dropdown"></select>
-        </div>
-
-        <br>
-
-        <div>
-            <label for="weekdayDropdown">選擇星期:</label>
-            <select id="weekdayDropdown"></select>
-
-            <label for="timeDropdown">選擇時段:</label>
-            <select id="timeDropdown"></select>
-        </div>
-
-        <div id="singing-hour" style="display:none;">
-            <br>
-            <label for="singing-hour-input">歡唱時間:</label>
-            <input type="number" id="singing-hour-input" name="singing-hour-input" min="1">
-        </div>
-
-        <!-- <br>
-        <div class="spicial">
-            特殊條件:
-            <label>
-                <input type="checkbox" name="spicial" value="member-day">
-                會員日
-            </label>
-            <label>
-                <input type="checkbox" name="spicial" value="member">
-                會員95折
-            </label>
-            <label>
-                <input type="checkbox" name="spicial" value="five-days-early">
-                提前五天預定
-            </label>
-        </div> -->
-
-        <br>
-        <button id="submit-btn">送出</button>
-
-        <div id="result">
-
-        </div>
-
+        <!-- 這裡會顯示分頁的內容 -->
     </main>
+
     <footer>
         <p>此網站非錢櫃官方提供，最終價格以錢櫃官方為準</p>
-        <p>&copy; 2023 Cashbox Calculator</p>
+        <small id="footer"></small>
     </footer>
 
     <script src="setStores.js"></script>
@@ -105,6 +58,26 @@
     <script src="./group/checkOutByUsingGroup.js"></script>
 
     <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const mainContent = document.querySelector('main');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const url = link.getAttribute('href');
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        mainContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            });
+        });
+
+
+        
         const personCount = document.getElementById('person-count');
         const weekdayDropdown = document.getElementById('weekdayDropdown');
         const timeDropdown = document.getElementById('timeDropdown');
@@ -247,6 +220,17 @@
             }
 
         });
+
+        const footer = document.getElementById('footer');
+        const footers = [
+            '獻給所有不想打電話的社恐仔',
+            '獻給不知道要出多少錢就不去唱歌的精打細算仔',
+        ];
+
+        const randomIndex = Math.floor(Math.random() * footers.length);
+        const randomFooter = footers[randomIndex];
+
+        footer.textContent = randomFooter;
 
     </script>
 </body>

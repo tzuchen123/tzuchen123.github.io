@@ -22,19 +22,19 @@ function checkOutByUsingPerson(store, weekday, time, personCount) {
             }else if(priceArray.length === 3){
                 price = parseFloat(priceArray[0]); 
                 singingHour = parseFloat(priceArray[1]); 
-                message = priceArray[2];
+                message = '營業時間' + priceArray[2];
             }
 
-            let pay = (price*singingHour + minimum* personCount) *1.1;
+            let pay = (price + minimum) * personCount*1.1;
             pay = Math.round(pay); // 将 pay 四舍五入到整数
 
             message = message + `
             <p>
-            消費金額為 ${pay} 元，每人須負擔 ${ Math.round(pay / personCount) } 元，包含贈送時數，所有歡唱時數為${singingHour}小時。
+            每人須負擔 ${ Math.round(pay / personCount) } 元，包含贈送時數，總歡唱時數為${singingHour}小時。
             <br>
             消費金額計算方式如下：
             <br>
-            (優惠時段價格 ${price} 元 * 歡唱時數 ${storeData['defaultSingingHour'][time]} 小時 + 餐飲低消 ${minimum} 元 * 人數 ${personCount} 人) * 1.1(服務費)
+            (優惠時段價格 ${price} 元  + 餐飲低消 ${minimum} 元 ) * 1.1(服務費)
             </p>
             `;
 
