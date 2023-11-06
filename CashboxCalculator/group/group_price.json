@@ -1,0 +1,326 @@
+[
+  {
+    "storeId": "k17",
+    "storeName": "臺北中華新館",
+    "table": [
+      {
+        "date": "歡唱時間",
+        "singingTime": "進場時段",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "13:00-13:59",
+        "singingHours": "5H",
+        "price": "799"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "14:00-16:59(週五至14:59)",
+        "singingHours": "4H",
+        "price": "899"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "12:00-12:59",
+        "singingHours": "5H",
+        "price": "999"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "13:00-15:59",
+        "singingHours": "4H",
+        "price": "1199"
+      }
+    ]
+  },
+  {
+    "storeId": "k02",
+    "storeName": "敦南",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "13:00 ~ 14:59",
+        "singingHours": "可歡唱至18:00(週五至17:00)",
+        "price": "699"
+      },
+      {
+        "date": "週日",
+        "singingTime": "11:00 ~ 14:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "859"
+      }
+    ]
+  },
+  {
+    "storeId": "k03",
+    "storeName": "林森",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "12:00 ~ 12:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "999"
+      }
+    ]
+  },
+  {
+    "storeId": "k07",
+    "storeName": "南京",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "11:00 ~ 14:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "799"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "11:00 ~ 14:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "899"
+      }
+    ]
+  },
+  {
+    "storeId": "k11",
+    "storeName": "松江",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週四",
+        "singingTime": "11:00 ~ 16:59",
+        "singingHours": "可歡唱至18:00",
+        "price": "799"
+      },
+      {
+        "date": "週五",
+        "singingTime": "11:00 ~ 15:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "799"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "11:00 ~ 15:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "899"
+      }
+    ]
+  },
+  {
+    "storeId": "k15",
+    "storeName": "忠孝",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "09:00 ~ 11:59",
+        "singingHours": "4H",
+        "price": "699"
+      }
+    ]
+  },
+  {
+    "storeId": "k21",
+    "storeName": "板橋",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "09:00 ~ 09:59",
+        "singingHours": "可歡唱至18:00",
+        "price": "869"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "09:00 ~ 09:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "1169"
+      }
+    ]
+  },
+  {
+    "storeId": "k25",
+    "storeName": "永和",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "13:00 ~ 13:59",
+        "singingHours": "可歡唱至19:00",
+        "price": "699"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "11:00 ~ 13:59",
+        "singingHours": "可歡唱至18:00",
+        "price": "999"
+      }
+    ]
+  },
+  {
+    "storeId": "k23",
+    "storeName": "桃園",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週四",
+        "singingTime": "09:00 ~ 16:59",
+        "singingHours": "09:00~13:00進場可歡唱至17:00,13:00後進場限唱4小時",
+        "price": "1199"
+      }
+    ]
+  },
+  {
+    "storeId": "k29",
+    "storeName": "中壢",
+    "table": [
+      {
+        "date": "歡唱時間",
+        "singingTime": "時段",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "12:00~13:59",
+        "singingHours": "可歡唱至18:00",
+        "price": "699"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "14:00~16:59",
+        "singingHours": "4H",
+        "price": "799"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "12:00~12:59",
+        "singingHours": "可歡唱至17:00",
+        "price": "899"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "13:00~15:59",
+        "singingHours": "4H",
+        "price": "999"
+      }
+    ]
+  },
+  {
+    "storeId": "k65",
+    "storeName": "嘉義",
+    "table": [
+      {
+        "date": "歡唱時間",
+        "singingTime": "時段",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "10:00 ~ 10:59 ",
+        "singingHours": "4H",
+        "price": "699"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "10:00 ~ 10:59 ",
+        "singingHours": "4H",
+        "price": "999"
+      }
+    ]
+  },
+  {
+    "storeId": "k63",
+    "storeName": "臺南",
+    "table": [
+      {
+        "date": "歡唱時間",
+        "singingTime": "時段",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一~週五",
+        "singingTime": "10:00 ~ 10:59",
+        "singingHours": "4H",
+        "price": "800"
+      },
+      {
+        "date": "週六~週日",
+        "singingTime": "10:00 ~ 10:59",
+        "singingHours": "4H",
+        "price": "1400"
+      }
+    ]
+  },
+  {
+    "storeId": "k68",
+    "storeName": "高雄建興",
+    "table": [
+      {
+        "date": "日期",
+        "singingTime": "歡唱時間",
+        "singingHours": "歡唱時數",
+        "price": "優惠價"
+      },
+      {
+        "date": "週一 ~ 週五",
+        "singingTime": "14:00 ~ 16:59",
+        "singingHours": "4H",
+        "price": "699"
+      },
+      {
+        "date": "週六 ~ 週日",
+        "singingTime": "08:00 ~ 12:59",
+        "singingHours": "歡唱至17:00",
+        "price": "799"
+      }
+    ]
+  }
+]

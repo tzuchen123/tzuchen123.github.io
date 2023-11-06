@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>錢櫃價錢分帳計算機</title>
+</head>
+
+<body>
+    <header>
+        <h1>錢櫃價錢分帳計算機</h1>
+    </header>
+    <main>
+
+        <div>
+            <label for="person-count">人數:</label>
+            <input type="number" id="person-count" name="person-count" min="1" value="1">
+        </div>
+
+        <br>
+
+        <div class="">
+            <label for="chargeDropdown">選擇計價方式:</label>
+            <select id="chargeDropdown">
+                <option>請選擇計價方式</option>
+                <option value="person">優惠時段(歡樂唱 唱滿點)</option>
+                <option value="box">包廂計費</option>
+                <option value="group">團唱享樂價(不限人數 歡唱到底)</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="">
+            <label for="storeDropdown">選擇分店:</label>
+            <select id="storeDropdown"></select>
+        </div>
+
+        <div id="box-size" style="display:none;">
+            <br>
+            <label for="box-size-dropdown">選擇包廂尺寸:</label>
+            <select id="box-size-dropdown"></select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="weekdayDropdown">選擇星期:</label>
+            <select id="weekdayDropdown"></select>
+
+            <label for="timeDropdown">選擇時段:</label>
+            <select id="timeDropdown"></select>
+        </div>
+
+        <div id="singing-hour" style="display:none;">
+            <br>
+            <label for="singing-hour-input">歡唱時間:</label>
+            <input type="number" id="singing-hour-input" name="singing-hour-input" min="1">
+        </div>
+
+        <!-- <br>
+        <div class="spicial">
+            特殊條件:
+            <label>
+                <input type="checkbox" name="spicial" value="member-day">
+                會員日
+            </label>
+            <label>
+                <input type="checkbox" name="spicial" value="member">
+                會員95折
+            </label>
+            <label>
+                <input type="checkbox" name="spicial" value="five-days-early">
+                提前五天預定
+            </label>
+        </div> -->
+
+        <br>
+        <button id="submit-btn">送出</button>
+
+        <div id="result">
+
+        </div>
+
+    </main>
+    <footer>
+        <p>此網站非錢櫃官方提供，最終價格以錢櫃官方為準</p>
+        <p>&copy; 2023 Cashbox Calculator</p>
+    </footer>
+
+    <script src="setStores.js"></script>
+
+    <!-- box -->
+    <script src="./box/setBoxSize.js"></script>
+    <script src="./box/setBoxTime.js"></script>
+    <script src="./box/checkOutByUsingBox.js"></script>
+
+    <!-- person -->
+    <script src="./person/setPersonTime.js"></script>
+    <script src="./person/checkOutByUsingPerson.js"></script>
+
+    <!-- group -->
+    <script src="./group/setGroupTime.js"></script>
+    <script src="./group/checkOutByUsingGroup.js"></script>
+
+    <script>
+        const personCount = document.getElementById('person-count');
+        const weekdayDropdown = document.getElementById('weekdayDropdown');
+        const timeDropdown = document.getElementById('timeDropdown');
+        const singingHour = document.getElementById('singing-hour');
+        const singingHourInput = document.getElementById('singing-hour-input');
+        const submitBtn = document.getElementById('submit-btn');
+        const result = document.getElementById('result');
+
+        // 選擇計價方式:
+        chargeDropdown.addEventListener('change', () => {
+            weekdayDropdown.value = '';
+            timeDropdown.value = '';
+
+            if (chargeDropdown.value === 'box') {
+                //包廂
+                boxSize.style.display = 'block';
+                if (storeDropdown.value) {
+                    //設定包廂尺寸
+                    setBoxSize(storeDropdown.value);
+                }
+                setStore
+            } else if (chargeDropdown.value === 'person') {
+                //優惠時段
+                boxSize.style.display = 'none';
+                while (boxSizeDropdown.firstChild) {
+                    boxSizeDropdown.removeChild(boxSizeDropdown.firstChild);
+                }
+            } else if (chargeDropdown.value === 'group') {
+                //團唱
+                boxSize.style.display = 'none';
+                while (boxSizeDropdown.firstChild) {
+                    boxSizeDropdown.removeChild(boxSizeDropdown.firstChild);
+                }
+            }
+
+            setStore(chargeDropdown.value);
+        });
+
+        // 選擇分店:
+        storeDropdown.addEventListener('change', () => {
+            const store = storeDropdown.value;
+            const charge = chargeDropdown.value;
+
+            //clear old value
+            while (weekdayDropdown.firstChild) {
+                weekdayDropdown.removeChild(weekdayDropdown.firstChild);
+            }
+            while (timeDropdown.firstChild) {
+                timeDropdown.removeChild(timeDropdown.firstChild);
+            }
+            while (boxSizeDropdown.firstChild) {
+                boxSizeDropdown.removeChild(boxSizeDropdown.firstChild);
+            }
+            // clear singingHourInput
+            singingHourInput.value = '';
+
+
+            if (charge === 'box') {
+                setBoxSize(store);
+            }
+
+            if (store) {
+                switch (charge) {
+                    case 'box':
+                        setBoxTime(store)
+                        break;
+
+                    case 'person':
+                        setPersonTime(store)
+                        break;
+
+                    case 'group':
+                        setGroupTime(store)
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        });
+
+        // 選擇時段:
+        timeDropdown.addEventListener('change', () => {
+            singingHourInput.value = '';
+
+            if (chargeDropdown.value == 'box') {
+                singingHour.style.display = 'block';
+
+                const time = timeDropdown.options[timeDropdown.selectedIndex].text;
+                const [startTime, endTime] = time.replace(/[^\d:~～|∣]/g, '').split(/[∣|~～]/);
+                const [startHour, startMinute] = startTime.split(':').map(Number);
+                const [endHour, endMinute] = endTime.split(':').map(Number);
+                const hourDiff = endHour < startHour ? endHour + 24 - startHour : endHour - startHour;
+                singingHourInput.max = hourDiff + 1;
+            } else {
+                singingHour.style.display = 'none';
+            }
+
+        });
+
+
+        submitBtn.addEventListener('click', async () => {
+            const store = storeDropdown.value;
+            const weekday = weekdayDropdown.value;
+            const time = timeDropdown.value;
+            const charge = chargeDropdown.value;
+            const boxSize = boxSizeDropdown.value;
+            // const spicial = document.querySelectorAll('input[name="spicial"]:checked');
+            // //會員日不能與其他兩個共用
+            // if (spicial.length > 1 && spicial[0].value === 'member-day') {
+            //     alert('會員日不能與其他兩個共用');
+            //     return;
+            // }
+            // console.log(store, weekday, time, boxSize, personCount.value, singingHourInput.value);
+            result.innerHTML = '';
+            try {
+                let message = '';
+                switch (charge) {
+                    case 'box':
+                        message = await checkOutByUsingBox(store, weekday, time, boxSize, personCount.value, singingHourInput.value);
+                        break;
+
+                    case 'person':
+                        message = await checkOutByUsingPerson(store, weekday, time, personCount.value)
+                        break;
+
+                    case 'group':
+                        const selectedOption = weekdayDropdown.selectedOptions[0];
+                        const hour = selectedOption.getAttribute('data-hour');
+                        message = await checkOutByUsingGroup(store, weekday, hour, personCount.value)
+                        break;
+
+                    default:
+                        break;
+                }
+
+                result.innerHTML = message;
+            } catch (error) {
+                alert(error.message);
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

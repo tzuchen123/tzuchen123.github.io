@@ -1,0 +1,76 @@
+{
+	"stores": [
+		{
+			"name": "臺北敦南店",
+			"data_extent": "0200"
+		},
+		{
+			"name": "臺北林森店",
+			"data_extent": "K01"
+		},
+		{
+			"name": "臺北忠孝店",
+			"data_extent": "0107"
+		},
+		{
+			"name": "臺北松江店",
+			"data_extent": "0105"
+		},
+		{
+			"name": "臺北南京店",
+			"data_extent": "0600"
+		},
+		{
+			"name": "臺北中華新館",
+			"data_extent": "0114"
+		},
+		{
+			"name": "新北板橋店",
+			"data_extent": "0104"
+		},
+		{
+			"name": "新北永和店",
+			"data_extent": "0109"
+		},
+		{
+			"name": "桃園店",
+			"data_extent": "0108"
+		},
+		{
+			"name": "南崁店",
+			"data_extent": "0118"
+		},
+		{
+			"name": "中壢店",
+			"data_extent": "0900"
+		},
+		{
+			"name": "新竹店",
+			"data_extent": "0110"
+		},
+		{
+			"name": "臺中店",
+			"data_extent": "0103"
+		},
+		{
+			"name": "嘉義店",
+			"data_extent": "0112"
+		},
+		{
+			"name": "臺南店",
+			"data_extent": "0116"
+		},
+		{
+			"name": "高雄中華新館",
+			"data_extent": "0113"
+		},
+		{
+			"name": "高雄建興店",
+			"data_extent": "0120"
+		},
+		{
+			"name": "墾丁壹號店",
+			"data_extent": "0119"
+		}
+	]
+}
