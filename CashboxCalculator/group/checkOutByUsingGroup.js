@@ -1,49 +1,38 @@
-function checkOutByUsingGroup(store, weekday, hour, personCount) {
-    console.log(store, weekday, hour, personCount);
-    let message = '';
-
-    message = message + `
-    <p>
-    您的消費金額為 ${weekday} 元，每人須負擔 ${ Math.round(weekday / personCount) } 元。
-    <br>
-    ${hour} 
-    </p>
-    `;
-    return message;
-    
-    
-    return fetch('box/box_price.json')
+function checkOutByUsingGroup(store, hourIndex, personCount) {
+    return fetch('group/group_price.json')
         .then(response => response.json())
         .then(data => {
-            const storeData = data.find(item => item.data_extent === store);
+            const storeData = data.find(item => item.storeId === store);
             const minimum = storeData.minimum;
-            const boxData = storeData.boxes.find(item => item.boxName === boxSize);
-            let priceString = boxData.priceTable[time][weekday];
+            const table = storeData.table[hourIndex];
 
-            let price = 0; 
+            const price = table.price;
+            const singingHours = table.singingHours;
+            const singingTime = table.date + ' ' + table.singingTime;
+            const fees = table.fees;
+
+            let pay = (price + minimum * personCount);
             let message = '';
 
-            if (priceString.indexOf('-') !== -1) {
-                message = '該時段沒有包廂可用';
-                return message;
-            }else if (priceString.indexOf('起') !== -1) {
-                //重新計算歡唱時間
-                const [startHour, pricePart] = priceString.split('起');
-                message = `該時段從${startHour}開始，請確認歡唱時間是否超過`;
-                price = parseFloat(pricePart); 
+            if (personCount <= 6) {} 
+            else if (personCount >= 7 && personCount <= 9 && fees.length !== 0) {
+                pay = pay + fees.medium;
+            } else if(personCount >= 10 && personCount <= 15  && fees.length !== 0){
+                pay = pay + fees.large;
             } else {
-                price = parseFloat(priceString);
+                message = '升級包廂費用，請洽詢店家。';
             }
-            let pay = (price*singingHour + minimum* personCount) *1.1;
-            pay = Math.round(pay); // 将 pay 四舍五入到整数
 
+            pay = pay*1.1;
             message = message + `
             <p>
-            您的消費金額為 ${pay} 元，每人須負擔 ${ Math.round(pay / personCount) } 元。
+            您的消費金額為 ${ Math.round(pay) } 元，每人須負擔 ${ Math.round(pay / personCount) } 元。
             <br>
             消費金額計算方式如下：
             <br>
-            (包廂價格 ${price} 元 * 歡唱時間 ${singingHour} 小時 + 餐飲低消 ${minimum} 元 * 人數 ${personCount} 人) * 1.1(服務費)
+            (團唱優惠價 ${price} 元 + 餐飲低消 ${minimum} 元 * 人數 ${personCount} 人) * 1.1(服務費)
+            <br>
+            歡唱時間${singingTime}，歡唱時數${singingHours}
             </p>
             `;
 

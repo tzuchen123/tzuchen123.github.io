@@ -20,17 +20,50 @@ const fetchData = async () => {
             const table = $(this).find('table tbody tr').map(function () {
                 const cells = $(this).find('td');
                 if (cells.length === 4) {
-                    const [date, singingTime, singingHours, price] = cells.toArray().map(cell => $(cell).text());
+                    const [date, singingTime, singingHours, priceStr] = cells.toArray().map(cell => $(cell).text());
+                    const price = parseInt(priceStr);
                     return { date, singingTime, singingHours, price };
                 }
                 return null;
             }).get();
+
+            let minimum = 0;
+            const ul = $(this).find('ul li:contains("基消")');
+            if (ul.length !== 0) {
+                const li = ul[0];
+                const text = $(li).text();
+
+                const regex = /(\d+)/; 
+                const match = text.match(regex); 
+                minimum = parseInt(match[0]); 
+            }
+
+            let fees = {};
+            const mediumBox = $(this).find('ul li:contains("中包廂加收")');
+            if (mediumBox.length !== 0) {
+                const li = mediumBox[0];
+                const text = $(li).text();
+                const regex = /中包廂加收\$(\d+)/; 
+                const match = text.match(regex);
+                fees.medium = parseInt(match[1]); // 取得第一個捕獲組的匹配結果
+            }
+
+            const largeBox = $(this).find('ul li:contains("大包廂加收")');
+            if (largeBox.length !== 0) {
+                const li = largeBox[0];
+                const text = $(li).text();
+                const regex = /大包廂加收\$(\d+)/; 
+                const match = text.match(regex); 
+                fees.large = parseInt(match[1]); // 取得第一個捕獲組的匹配結果
+            }
 
             // 構建每個tab的JSON數據
             jsonData.push({
                 storeId,
                 storeName,
                 table,
+                minimum,
+                fees
             });
         });
 
