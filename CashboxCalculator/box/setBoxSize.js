@@ -1,5 +1,5 @@
-const boxSize = document.getElementById('box-size');
-const boxSizeDropdown = document.getElementById('box-size-dropdown');
+const boxSize = document.getElementById('boxSize');
+const boxSizeDropdown = document.getElementById('boxSizeDropdown');
 
 // Fetch and parse the JSON file
 function setBoxSize(store) {
